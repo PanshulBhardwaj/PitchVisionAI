@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.pt
+*.onnx
+.env
+data/uploads/*
+data/outputs/*
+sample_data/*
+!sample_data/.gitkeep
+!sample_data/SOURCES.md
+*.part
+*.db

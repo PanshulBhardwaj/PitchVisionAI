@@ -1,0 +1,10 @@
+# ByteTrack settings tuned to reduce ID fragmentation on broadcast/wide football footage.
+# Use:  python run_baseline.py clip.mp4 --tracker configs/bytetrack_pitch.yaml
+# Built-in defaults (ultralytics bytetrack.yaml) are shown in the trailing comments.
+tracker_type: bytetrack
+track_high_thresh: 0.5   # default 0.25. Detections above this drive first-pass matching.
+track_low_thresh: 0.1    # default 0.1.  Second-pass matching; only sees boxes that survive --conf.
+new_track_thresh: 0.5    # default 0.25. A brand-new ID needs a confident detection (fewer junk IDs).
+track_buffer: 90         # default 30.   Frames a lost track is kept alive (~3.6 s at 25 fps).
+match_thresh: 0.8        # default 0.8.  IoU-based association threshold.
+fuse_score: true         # default true.

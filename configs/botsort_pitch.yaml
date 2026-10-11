@@ -1,0 +1,14 @@
+# BoT-SORT: like ByteTrack plus camera-motion compensation (gmc), which stops IDs
+# breaking when the broadcast camera pans/zooms. Appearance ReID is off (no extra model/download).
+# Use:  python run_baseline.py clip.mp4          (this is the default "accurate" preset)
+tracker_type: botsort
+track_high_thresh: 0.5
+track_low_thresh: 0.1
+new_track_thresh: 0.5
+track_buffer: 90
+match_thresh: 0.8
+fuse_score: true
+gmc_method: sparseOptFlow   # camera-motion compensation (options: orb, sift, ecc, sparseOptFlow, none)
+proximity_thresh: 0.5
+appearance_thresh: 0.8
+with_reid: false
